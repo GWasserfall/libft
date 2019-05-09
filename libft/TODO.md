@@ -1,0 +1,30 @@
+*Functions to create for ftlibc*
+
+- memset    Done
+- bzero     Done
+- memcpy    Done
+- memccpy 
+- memmove 
+- memchr 
+- memcmp 
+- strlen    Done
+- strdup 
+- strcpy 
+- strncpy 
+- strcat 
+- strncat 
+- strlcat 
+- strchr 
+- strrchr 
+- strstr 
+- strnstr 
+- strcmp 
+- strncmp 
+- atoi 
+- isalpha
+- isdigit   Done
+- isalnum   Done
+- isascii 
+- isprint 
+- toupper   Done
+- tolower   Done
