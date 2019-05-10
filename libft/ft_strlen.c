@@ -5,13 +5,13 @@ null byte ('\0').
 The strlen() function returns the number of characters in the string pointed to by s.
 */
 
-int ft_strlen(char * string)
+int ft_strlen(char * str)
 {
 	int count;
 
 	count = 0;
 
-	while (*string++)
+	while (*str++)
 	{
 		count++;
 	}
