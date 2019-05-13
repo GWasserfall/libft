@@ -3,28 +3,28 @@
 - memset    Done
 - bzero     Done
 - memcpy    Done
-- memccpy 
-- memmove 
-- memchr 
-- memcmp 
+- memccpy	__
+- memmove	__ 
+- memchr	__ 
+- memcmp	__
 - strlen    Done
-- strdup 
-- strcpy 
-- strncpy 
-- strcat 
-- strncat 
-- strlcat 
-- strchr 
-- strrchr 
-- strstr 
-- strnstr 
-- strcmp 
-- strncmp 
-- atoi 
-- isalpha
+- strdup	__
+- strcpy	__
+- strncpy	__
+- strcat	__
+- strncat	__
+- strlcat	__
+- strchr	__
+- strrchr	__
+- strstr	Done
+- strnstr	__
+- strcmp	__
+- strncmp	__
+- atoi		Done
+- isalpha	Done
 - isdigit   Done
 - isalnum   Done
-- isascii 
-- isprint 
+- isascii	Done
+- isprint 	Done
 - toupper   Done
 - tolower   Done

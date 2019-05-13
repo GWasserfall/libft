@@ -6,7 +6,7 @@
 void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
     const char *source;
-    char * destination;
+    char *destination;
     int index;
 
     index = 0;
@@ -22,8 +22,7 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
             printf("Found character\n");
             return ((void *)&source[index + 1]);
         }
-        
-
         index++;
     }
+    return (dest);
 }

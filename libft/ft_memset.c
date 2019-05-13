@@ -15,5 +15,6 @@ void * ft_memset(void *dest, int val, size_t length)
         ptr[index] = val;
 		index++;
     }
+    return (dest);
 }
 
