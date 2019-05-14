@@ -3,8 +3,8 @@
 
 void *ft_memchr(void *s, int c, size_t n)
 {
-	char *str;
-	unsigned int index;
+	char	*str;
+	size_t	index;
 
 	str = (char *)s;
 	index = 0;

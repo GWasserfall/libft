@@ -2,9 +2,9 @@
 
 void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-    const char *source;
-    char *destination;
-    int index;
+    const char  *source;
+    char        *destination;
+    int         index;
 
     index = 0;
     source = src;
