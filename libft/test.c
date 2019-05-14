@@ -94,4 +94,13 @@ int main()
 	printf("%s", str);
 	// should output "soulo"
 
+
+	// Test strcat
+	char buffer[80];
+
+    strcpy( buffer, "Hello " );
+    ft_strcat( buffer, "world" );
+
+    printf( "%s\n", buffer );
+
 }
