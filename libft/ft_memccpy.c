@@ -1,7 +1,4 @@
 #include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-
 
 void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
@@ -19,7 +16,6 @@ void *ft_memccpy(void *dest, const void *src, int c, size_t n)
 
         if (source[index] == (char)c)
         {
-            printf("Found character\n");
             return ((void *)&source[index + 1]);
         }
         index++;

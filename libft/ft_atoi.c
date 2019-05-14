@@ -13,8 +13,11 @@ int ft_atoi(char *str)
 		|| *str == '\f' || *str == '\r' || *str == '\v')
 		str++;
 	
-	if (*str++ == '-')
+	if (*str == '-')
+	{
 		sign = -1;
+		str++;
+	}
 
 	while (*str >= '0' && *str <= '9')
 	{

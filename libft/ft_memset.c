@@ -2,7 +2,7 @@
 
 // ft_memset(string, '.', int(len)*sizeof(char));
 
-void * ft_memset(void *dest, int val, size_t length)
+void *ft_memset(void *dest, int val, size_t length)
 {
     char *ptr;
     int index;

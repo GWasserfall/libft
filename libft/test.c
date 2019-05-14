@@ -66,7 +66,7 @@ int main()
 	out("ft_toupper('A')", (ft_toupper('A') == 'A'), ft_toupper('A'));
 
 	out("ft_strlen(\"This is fifteen\")", (ft_strlen("This is fifteen") == 15), ft_strlen("This is fifteen"));
-	out("ft_strlen(\"\")", (ft_strlen("") == 0), ft_strlen("12345"));
+	out("ft_strlen(\"\")", (ft_strlen("") == 0), ft_strlen(""));
 	out("ft_strlen(\"some random \\0 this is invisible'\")", (ft_strlen("some random \0 this is invisible") == 12), ft_strlen("some random \0 this is invisible'"));
 
 
@@ -84,5 +84,14 @@ int main()
 
 	printf("%s\n", ft_strstr("a long string", ""));
 
+
+	printf("%d\n", ft_atoi("    1234"));
+
+
+	// memmove
+	char str[5] = "hello";
+	ft_memmove(str, "source string", 3);
+	printf("%s", str);
+	// should output "soulo"
 
 }
