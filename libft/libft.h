@@ -1,10 +1,10 @@
 #ifndef LIBFT__H_
 #define LIBFT__H_
-#define NULL ((void *)0)
 #include <string.h>
 
 char    *ft_strcat(char *dest, const char *src);
 char    *ft_strstr(char *haystack, char *needle);
+char	*ft_strnstr(char *haystack, char *needle, size_t len);
 int     ft_atoi(char *str);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

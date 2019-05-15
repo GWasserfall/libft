@@ -103,4 +103,10 @@ int main()
 
     printf( "%s\n", buffer );
 
+
+	// ft_strnstr
+
+	printf("%s", ft_strnstr("hello hi", "hi", 8));
+
+
 }

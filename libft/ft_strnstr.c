@@ -1,14 +1,14 @@
 #include "libft.h"
 
-char	*ft_strstr(char *haystack, char *needle)
+char	*ft_strnstr(char *haystack, char *needle, size_t len)
 {
-	int len;
+	int length;
 	int index;
 
 	index = 0;
-	len = ft_strlen(needle);
+	length = ft_strlen(needle);
 
-	if (len == 0)
+	if (length == 0)
 		return (haystack);
 	while (*haystack++)
 	{
@@ -16,10 +16,12 @@ char	*ft_strstr(char *haystack, char *needle)
 		{
 			if (needle[index] != *(haystack + index))
 				break;
-			if (index == len - 1)
+			if (index == length - 1)
 				return haystack;
 			index++;
 		}
+		if (len-- == 0)
+			return NULL;
 		index = 0;
 	}
 	return NULL;
