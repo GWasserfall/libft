@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/15 14:04:00 by event             #+#    #+#             */
-/*   Updated: 2019/05/15 14:26:22 by event            ###   ########.fr       */
+/*   Updated: 2019/05/15 14:54:19 by event            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ char	*ft_strchr(const char *s, int c)
 {
 	int index;
 
+	index = 0;
+
 	while (1)
 	{
 		if (s[index] == c)
-			return (s[index]);
+			return ((char *)&s[index]);
 		if (s[index] == '\0')
 			return NULL;
 		index++;

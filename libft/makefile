@@ -1,4 +1,5 @@
 make:
+	rm libft.a || echo 'No lib file found'
 	gcc -c ft_*.c -Wall -Wextra -Werror
 	ar -rsc libft.a ft_*.o
 	rm *.o
