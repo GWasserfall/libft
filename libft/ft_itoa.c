@@ -1,34 +1,25 @@
-#include "libft.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
 
 char * ft_itoa(int n)
 {
     int     negative;
-    char *  ptr;
-    char    result[12];
+    char *  str;
 
-    negative = 0;
+    str = &ft_strnew(13)[11];
 
-    if (n < 0)
+    if ((negative = 0) && n < 0)
         negative = 1;
-
-    ptr = &result[12];
-    printf("Start = %p\n", ptr);
 
     while (n > 0)
     {
-        printf("iter\n");
-        *ptr-- = (n % 10) + '0';
-        n /= 10;    
-    }
+		*str-- = (n % 10) + '0';
+		n /= 10;
+	}
 
-    printf("End = %p : %c\n", ptr + 1, *(ptr + 1));
+	if (negative)
+		*str = '-';
 
-    return ((char *)ptr);
-}
-
-void main()
-{
-    //printf("%p", ft_itoa(1230));
-    ft_itoa(1230);
+	return (str);
 }
