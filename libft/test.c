@@ -109,4 +109,9 @@ int main()
 	printf("%s", ft_strnstr("hello hi", "hi", 8));
 
 
+
+	// ft_memalloc
+	ft_memalloc(10);
+
+
 }

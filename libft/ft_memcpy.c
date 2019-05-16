@@ -15,6 +15,5 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
         destination[index] = source[index];
         index++;
     }
-
     return dest;
 }
