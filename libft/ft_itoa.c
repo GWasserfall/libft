@@ -12,18 +12,23 @@ char * ft_itoa(int n)
     if (n < 0)
         negative = 1;
 
-    ptr = &result[11];
+    ptr = &result[12];
+    printf("Start = %p\n", ptr);
 
     while (n > 0)
     {
-        *ptr-- = (n % 10);
-        n /= 10;
+        printf("iter\n");
+        *ptr-- = (n % 10) + '0';
+        n /= 10;    
     }
 
-    return (ptr);
+    printf("End = %p : %c\n", ptr + 1, *(ptr + 1));
+
+    return ((char *)ptr);
 }
 
 void main()
 {
-    printf("%s", ft_itoa(1230));
+    //printf("%p", ft_itoa(1230));
+    ft_itoa(1230);
 }
