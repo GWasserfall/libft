@@ -106,8 +106,13 @@ int main()
 
 	// ft_strnstr
 
-	printf("%s", ft_strnstr("hello hi", "hi", 8));
+	//printf("%s", ft_strnstr("hello hi", "hi", 8));
 
+	ft_putchar('a');
+	ft_putchar('\n');
+
+
+	ft_putstr("Hello\n");
 
 
 	// ft_memalloc
