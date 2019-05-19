@@ -8,10 +8,10 @@ void *ft_memalloc(size_t size)
 
 	mem = (void *)malloc(size);
 
-	ft_bzero(mem, size);
-
 	if (!mem)
 		return (NULL);
+
+	ft_bzero(mem, size);
 
 	return (mem);
 }

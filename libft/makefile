@@ -1,4 +1,4 @@
-make:
+re:
 	rm libft.a || echo 'No lib file found'
 	gcc -c ft_*.c -Wall -Wextra -Werror
 	ar -rsc libft.a ft_*.o
@@ -7,7 +7,7 @@ make:
 run:
 	gcc -g test.c libft.a && ./a.out
 
-shared:
+so:
 	gcc -c ft_*.c -Wall -Wextra -Werror
 	gcc -shared -o libft.so -fPIC ft*.o
 	rm *.o

@@ -3,8 +3,8 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t		iter;
-	const char	*str1;
-	const char	*str2;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
 
 	str1 = s1;
 	str2 = s2;

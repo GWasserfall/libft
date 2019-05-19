@@ -11,6 +11,13 @@
 #define KCYN  "\x1B[36m"
 #define KWHT  "\x1B[37m"
 
+void head(char *str)
+{
+	printf("\n");
+	printf( KCYN "==================== Testing %s =====================" KWHT "\n", str);
+}
+
+
 void out(char * string, int result, int ret)
 {
 	if (result >= true)
@@ -99,7 +106,7 @@ int main()
 	char buffer[80];
 
     strcpy( buffer, "Hello " );
-    ft_strcat( buffer, "world" );
+    ft_strcat( buffer, "world!" );
 
     printf( "%s\n", buffer );
 
@@ -112,11 +119,36 @@ int main()
 	ft_putchar('\n');
 
 
-	ft_putstr("Hello\n");
+	ft_putstr("Hello\n\n");
 
 
 	// ft_memalloc
 	ft_memalloc(10);
 
+	head("ft_putstr_fd");
+	//void ft_putstr_fd(char const *s, int fd)
+	ft_putstr_fd("Function is working correctly!\n", 1);
+
+
+	//ft_putendl_fd(char const *s, int fd)
+	head("ft_putstr_fd");
+	ft_putendl_fd("Test with new line", 1);
+
+	//void ft_putchar_fd(char c, int fd)
+	int		c = L'ø';
+	
+	head("ft_putchar_fd");
+	ft_putchar_fd(c, 1);
+	ft_putchar_fd('o', 1);
+	ft_putchar_fd('r', 1);
+	ft_putchar_fd('k', 1);
+	ft_putchar_fd('i', 1);
+	ft_putchar_fd('n', 1);
+	ft_putchar_fd('g', 1);
+	ft_putchar_fd('!', 1);
+
+	printf("\n\n");
+
+	printf("toupper(-100) = %d\n", toupper(-1));
 
 }

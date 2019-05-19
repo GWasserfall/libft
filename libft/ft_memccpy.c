@@ -10,7 +10,7 @@ void    *ft_memccpy(void *dest, const void *src, int c, size_t n)
     source = src;
     destination = dest;
 
-    while (n-- > 0)
+    while (n-- > 0 && dest != NULL)
     {
         destination[index] = source[index];
 
@@ -20,5 +20,5 @@ void    *ft_memccpy(void *dest, const void *src, int c, size_t n)
         }
         index++;
     }
-    return (dest);
+    return (NULL);
 }
