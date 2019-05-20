@@ -1,41 +1,32 @@
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/20 18:33:32 by gwasserf          #+#    #+#             */
+/*   Updated: 2019/05/20 18:34:42 by gwasserf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t iterations;
-	char * ptr;
+	size_t	iterations;
+	char	*ptr;
 
 	iterations = dstsize - (size_t)strlen(dst) - 1;
-	
 	ptr = dst;
-
 	ptr += strlen(dst);
-
-//	printf("ptr = %s\n", ptr);
-
-//	printf("Will do this many iterations : %d\n", (int)iterations);
-
 	while (iterations > 0)
 	{
-//		printf("%d\n", iterations);
 		*ptr = *src;
 		ptr++;
-		src++;		
+		src++;
 		iterations--;
 	}
 	*(ptr) = '\0';
-
 	return (iterations);
 }
-
-//int main(void)
-//{
-//	char dst[70] = "hello";
-//	char src[] = "hi";
-//
-//	ft_strlcat(dst, src, 8);
-//	printf("%s\n", dst);
-//	return (0);
-//
-//}

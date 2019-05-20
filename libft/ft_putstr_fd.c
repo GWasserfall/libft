@@ -1,7 +1,18 @@
-#include "libft.h"
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/20 18:27:47 by gwasserf          #+#    #+#             */
+/*   Updated: 2019/05/20 18:28:08 by gwasserf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putstr_fd(char const *s, int fd)
+#include "libft.h"
+
+void	ft_putstr_fd(char const *s, int fd)
 {
 	write(fd, s, ft_strlen((char *)s));
 }

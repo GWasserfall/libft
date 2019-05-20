@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/15 09:00:12 by event             #+#    #+#             */
-/*   Updated: 2019/05/15 09:00:16 by event            ###   ########.fr       */
+/*   Updated: 2019/05/20 17:06:26 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,17 @@ int	ft_atoi(char *str)
 
 	result = 0;
 	sign = 1;
-
-	while (*str == '\n' || *str == ' ' || *str == '\t'
-		|| *str == '\f' || *str == '\r' || *str == '\v')
+	while (ft_isspace)
 		str++;
-
 	if (*str == '-')
 	{
 		sign = -1;
 		str++;
 	}
-
 	while (*str >= '0' && *str <= '9')
 	{
 		result = (result * 10) + (*str - '0');
 		str++;
 	}
-
-	return result * sign;
+	return (result * sign);
 }
