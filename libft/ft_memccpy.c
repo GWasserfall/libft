@@ -10,13 +10,13 @@ void    *ft_memccpy(void *dest, const void *src, int c, size_t n)
     source = src;
     destination = dest;
 
-    while (n-- > 0 && dest != NULL)
+    while (n-- > 0)
     {
         destination[index] = source[index];
 
         if (source[index] == (char)c)
         {
-            return ((void *)&source[index + 1]);
+            return ((void *)&destination[index + 1]);
         }
         index++;
     }

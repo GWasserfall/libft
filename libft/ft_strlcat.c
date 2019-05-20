@@ -1,22 +1,41 @@
 #include <string.h>
+#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t index;
+	size_t iterations;
+	char * ptr;
 
-	index = 0;
+	iterations = dstsize - (size_t)strlen(dst) - 1;
+	
+	ptr = dst;
 
-	if (dstsize == 0)
-		return (dstsize);
+	ptr += strlen(dst);
 
-	while (index < (dstsize - 1))
+//	printf("ptr = %s\n", ptr);
+
+//	printf("Will do this many iterations : %d\n", (int)iterations);
+
+	while (iterations > 0)
 	{
-		*dst = *src;
-		src++;
-		dst++;
-		index++;
+//		printf("%d\n", iterations);
+		*ptr = *src;
+		ptr++;
+		src++;		
+		iterations--;
 	}
-	*dst = '\0';
+	*(ptr) = '\0';
 
-	return (index);
+	return (iterations);
 }
+
+//int main(void)
+//{
+//	char dst[70] = "hello";
+//	char src[] = "hi";
+//
+//	ft_strlcat(dst, src, 8);
+//	printf("%s\n", dst);
+//	return (0);
+//
+//}
