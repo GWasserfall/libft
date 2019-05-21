@@ -7,6 +7,9 @@
 *.obj
 *.elf
 
+# DS Store
+.DS_Store
+
 # Linker output
 *.ilk
 *.map
@@ -41,6 +44,9 @@
 *.su
 *.idb
 *.pdb
+
+# VSCode
+.vscode
 
 # Kernel Module Compile Results
 *.mod*

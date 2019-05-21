@@ -16,7 +16,7 @@
 * All identifiers (functions, macros, types, variables, etc.) must be in English.
 * Any use of global variable must be justified.
 
-##2 Formatting
+## 2 Formatting
 **Mandatory part**
 * All your files will have to start with the standard header of 42 from the first line. This header is available by default in emacs and vim editors on dumps.
 * You must indent your code with tabs the size of 4 spaces. This is not equivalent to 4 space, they are tabs.
@@ -38,12 +38,12 @@
 * Multiple assignment is prohibited.
 * You can return to the line during the same instruction or structure of control, but you must add an indentation by parenthesis or operator stations. Operators must be at the beginning of the line.
 
-##3 Function parameters
+## 3 Function parameters
 **Mandatory part**
 * A function takes up to 4 named parameters.
 * A function that does not take argument must explicitly be prototyped with the word void as argument.
 
-##4 Functions
+## 4 Functions
 **Mandatory part**
 * Prototype function parameters must be named.
 * Each function definition must be separated by a blank line from the next.
@@ -53,7 +53,7 @@
 **Suggested part**
 * Your function identifiers must be aligned in one file. This applies to C headers.
 
-##5 Typedef, struct, enum and union
+## 5 Typedef, struct, enum and union
 **Mandatory part**
 * You must put a tab when you declare a struct, enum, or union.
 * When declaring a variable of type struct, enum or union, you do not put a space in the type.
@@ -61,7 +61,7 @@
 * When you declare a struct, union or enum with a typedef, all the rules apply and you must align the name of the typedef with the name of the struct, union or enum.
 * You can not declare a structure in a .c file.
 
-##6 Headers
+## 6 Headers
 **Mandatory part**
 * Only inclusions of headers (system or not), declarations, defines, prototypes and macros are allowed in the headers files.
 * All includes of .h must be at the beginning of the file (.c or .h).
@@ -72,7 +72,7 @@
 **Suggested part**
 * Any inclusion of header must be justified in both .c and .h.
 
-##7 Macros and Preprocessor
+## 7 Macros and Preprocessor
 **Mandatory part**
 * The preprocessor constants (#define) that you create should not be used only to associate literal and constant values, and nothing else.
 * The #define written in order to circumvent the norm and / or obfuscate code prohibited by the standard are prohibited. This point must be verifiable by humans.
@@ -81,7 +81,7 @@
 * Only macro names are in uppercase
 * You must indent the characters that follow a #if, #ifdef or #ifndef
 
-##8 Prohibited things!
+## 8 Prohibited things!
 **Mandatory part**
 * You are not allowed to use:
   - for
@@ -92,7 +92,7 @@
   - Ternary operators '?' Nested
   - Variable Length Arrays (VLAs)
 
-##9 Comments
+## 9 Comments
 **Mandatory part**
 * Comments can be found in all source files.
 * There should be no comments in the function body.
@@ -103,12 +103,12 @@
 * Your comments must be in English and useful.
 * Comments can not justify a bastard function.
 
-##10 The files
+## 10 The files
 **Mandatory part**
 * You can not #include a .c file.
 * You can not have more than 5 function definitions in a .c file.
 
-##11 Makefile
+## 11 Makefile
 **Mandatory part**
 * The **$(NAME)**, **clean**, **fclean**, **re** and **all** rules are required.
 * The project is considered non-functional if the Makefile relinks.
