@@ -1,11 +1,21 @@
-#include <unistd.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/20 18:21:46 by gwasserf          #+#    #+#             */
+/*   Updated: 2019/05/20 18:25:31 by gwasserf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putchar_fd(char c, int fd)
+#include <unistd.h>
+
+void	ft_putchar_fd(char c, int fd)
 {
-	printf("%d", c);
 	unsigned char character;
 
 	character = c;
-	write(fd, &character, 1);
+	write(fd, &character, fd);
 }
