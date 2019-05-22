@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
@@ -23,4 +22,3 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	}
 	return new;
 }
-
