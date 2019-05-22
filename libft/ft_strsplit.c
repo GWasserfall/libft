@@ -16,13 +16,16 @@ static int char_to_null(char *str, char c)
 	return count;
 }
 
-char **ft_strsplit(char const *s, char c)
+char	**ft_strsplit(char const *s, char c)
 {
 	char **array;
 	char *ptr;	
 	int strlen;
 	int jump;
 	int insert;
+
+	if (!s)
+		return NULL;
 
 	insert = 0;
 	ptr = ft_strdup(s);
