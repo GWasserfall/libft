@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_atoi(char *str)
 {
 	int result;
@@ -17,7 +19,7 @@ int	ft_atoi(char *str)
 
 	result = 0;
 	sign = 1;
-	while (ft_isspace)
+	while (ft_isspace(*str))
 		str++;
 	if (*str == '-')
 	{

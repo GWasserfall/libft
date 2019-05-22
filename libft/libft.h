@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <string.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 char	*ft_itoa(int n);
 char	*ft_strcat(char *dest, const char *src);
@@ -26,7 +27,7 @@ char	*ft_strnew(size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_strncat(char *dest, const char *src, size_t n);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
-int		is_space(char c);
+int		ft_isspace(char c);
 int		ft_atoi(char *str);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

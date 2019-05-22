@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
 
+libft-unit-test/
+
 # Object files
 *.o
 *.ko
@@ -46,7 +48,7 @@
 *.pdb
 
 # VSCode
-.vscode
+.vscode/
 
 # Kernel Module Compile Results
 *.mod*
