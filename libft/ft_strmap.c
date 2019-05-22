@@ -1,15 +1,26 @@
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char *new;
+	int i;
 
-	new = (char *)malloc(4);
+	if (!s)
+		return NULL;
+
+	i = 0;
+	new = ft_strnew(ft_strlen((char *)s));
+
+	if (!new)
+		return NULL;
 
 	while (*s)
 	{
-		f(*s);
+		new[i] = f(*s);
 		s++;
+		i++;
 	}
 	return new;
 }
+
