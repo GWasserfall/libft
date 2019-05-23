@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 17:38:11 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/20 17:38:12 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/05/23 12:52:41 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*temp;
+	char		temp[n];
 	const char	*source;
 	char		*destination;
 	int			index;
-
-	temp = (char *)malloc(n);
+	
+	//temp = (char *)malloc(n);
 	source = (char *)src;
 	destination = (char *)dest;
 	index = 0;
@@ -33,6 +33,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	while (--index >= 0)
 		destination[index] = temp[index];
-	free(temp);
+	//free(temp);
 	return (dest);
 }

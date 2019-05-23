@@ -1,27 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/23 14:17:35 by gwasserf          #+#    #+#             */
+/*   Updated: 2019/05/23 14:17:37 by gwasserf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	// size_t diff;
-	// size_t str;
-	size_t i;
-	char *newstr;
+	int		index;
+	char	*newstr;
 
-	i = 0;
+	newstr = ft_strnew(len);
 
-	if (!len || !start)
-		return NULL;
-	
+	if (!newstr || !s)
+		return (NULL);
+
+	index = 0;
 	s += (int)start;
 
-	newstr = ft_strnew(100);
-
-	while (len)
+	while (index < (int)len)
 	{
-		newstr[i] = *s;
-		len--;
-		i++;
+		newstr[index] = *s;
+		s++;
+		index++;
 	}
-
-	return newstr;
+	return (newstr);
 }

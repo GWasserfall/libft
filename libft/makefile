@@ -3,9 +3,9 @@ NAME=libft.a
 # CFLAGS=-Wall -Werror -Wextra
 
 
-all: $(NAME)
+all: fclean $(NAME) clean
 
-$(NAME): 
+$(NAME):
 	gcc -c ft_*.c
 	ar -rsc libft.a ft_*.o
 

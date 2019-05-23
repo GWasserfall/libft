@@ -12,9 +12,16 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define INTMAX 2147483647
+# define INTMIN -2147483648
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
+
+
+
+
 
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
