@@ -17,11 +17,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
-
-
-
-
+# include <stdio.h>
 
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);

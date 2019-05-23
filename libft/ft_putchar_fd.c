@@ -14,13 +14,8 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, fd);
-}
+	unsigned char chr;
 
-int main()
-{
-	for (int i = 0; i < 128; i++)
-	{
-		ft_putchar_fd(i, 1);
-	}
+	chr = (unsigned char)c;
+	write(fd, &chr, 1);
 }

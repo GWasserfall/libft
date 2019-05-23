@@ -14,10 +14,9 @@
 
 char     *ft_strtrim(char const *s)
 {
-	char     *cursor;
-    char    *newstr;
-    int        len;
-    int        index;
+	char	*cursor;
+    char	*newstr;
+    int		index;
 
     cursor = (char *)s;
     while (ft_isspace(*cursor))

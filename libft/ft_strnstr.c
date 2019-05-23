@@ -24,7 +24,7 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 		return (haystack);
 	while (*haystack++ && iter++)
 	{
-		if (iter == len)
+		if (iter == (int)len)
 			return (NULL);
 		while (needle[index] != 0)
 		{
@@ -33,7 +33,7 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 			if (index == length - 1)
 				return (haystack);
 			index++;
-			if ((iter + index) >= len)
+			if ((iter + index) >= (int)len)
 				return (NULL);
 		}
 		index = 0;
