@@ -37,7 +37,7 @@ char	**ft_strsplit(char const *s, char c)
 		if (*ptr != 0)
 		{
 			jump = ft_strlen(ptr);
-			array[insert] = ft_strnew(jump + 1);
+			array[insert] = ft_strnew(jump);
 			ft_strcpy(array[insert], ptr);
 			insert++;
 			ptr += jump;

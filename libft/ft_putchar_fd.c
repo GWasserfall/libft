@@ -10,9 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, fd);
+}
+
+int main()
+{
+	for (int i = 0; i < 128; i++)
+	{
+		ft_putchar_fd(i, 1);
+	}
 }

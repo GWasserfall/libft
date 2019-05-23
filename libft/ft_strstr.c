@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/23 14:41:06 by gwasserf          #+#    #+#             */
+/*   Updated: 2019/05/23 14:41:07 by gwasserf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strstr(char *haystack, char *needle)
@@ -8,7 +20,7 @@ char	*ft_strstr(char *haystack, char *needle)
 	index = 0;
 	len = ft_strlen(needle);
 
-	if (len == 0)
+	if (len == 0 || (haystack == needle))
 		return (haystack);
 	while (*haystack++)
 	{
