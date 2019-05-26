@@ -18,13 +18,16 @@ char     *ft_strtrim(char const *s)
     char	*newstr;
     int		index;
 
+    if (!s)
+        return (NULL);
+
     cursor = (char *)s;
     while (ft_isspace(*cursor))
         cursor++;
 
     index = ft_strlen(cursor);
     while (ft_isspace(cursor[index - 1]))
-        index--;
+       index--;
 
     newstr = ft_strnew(index);
 	if (!newstr)
@@ -33,5 +36,4 @@ char     *ft_strtrim(char const *s)
     ft_strncpy(newstr, cursor, index + 1);
     newstr[index] = 0;
     return newstr;
-
 }
