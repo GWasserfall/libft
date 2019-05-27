@@ -12,27 +12,33 @@
 
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		temp[n];
-	const char	*source;
-	char		*destination;
-	int			index;
-	
-	//temp = (char *)malloc(n);
-	source = (char *)src;
-	destination = (char *)dest;
-	index = 0;
-	if (src == dest && n > 0)
-		return (NULL);
-	while (index < (int)n)
+	unsigned char *destination = (unsigned char*)dest;
+	unsigned char *source = (unsigned char*)src;
+
+	if (source == destination)
+		return (destination);
+
+	if (source < destination) 
 	{
-		temp[index] = source[index];
-		index++;
+		while (n > 0)
+		{
+			destination[n - 1] = source[n - 1];
+			n--;
+		}
 	}
-	while (--index >= 0)
-		destination[index] = temp[index];
-	//free(temp);
-	return (dest);
+	else
+	{
+		while (n > 0)
+		{
+			*destination = *source;
+			destination++;
+			source++;
+			n--;
+		}
+	}
+	return (destination);
 }

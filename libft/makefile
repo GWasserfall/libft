@@ -2,25 +2,10 @@
 NAME=libft.a
 # CFLAGS=-Wall -Werror -Wextra
 
-foo := who are you
-bar := $(foreach wrd,$(foo),$(wrd)!)
-
-.PHONY: all
-all: 
-	@echo $(bar)
-#all: fclean $(NAME) clean
-
-override f = 
-
-test: all
-	echo ${f}
-
-$(NAME):
+$(NAME): clean
 	gcc -c ft_*.c
 	ar -rsc libft.a ft_*.o
 	ranlib libft.a
-
-ft_tolower.c:
 
 clean:
 	-rm ft_*.o
