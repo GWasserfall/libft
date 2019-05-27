@@ -1,10 +1,9 @@
-#include "libft.h"
+#include <libft.h>
 #include <stdio.h>
 
 static int char_to_null(char *str, char c)
 {
 	int count;
-	int bit;
 	count = 0;
 	while (*str)
 	{
