@@ -2,22 +2,22 @@
 
 void ft_putnbr_fd(int n, int fd)
 {
-	char number;
+    long long num;
+    num = (long long)n;
+    if (num < 0)
+    {
+        num *= -1;
+        write(fd, "-", 1);
+    }
 
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		n *= -1;
-	}
-	if (n >= 0 && n <= 9)
-	{
-		number = n + '0';
-		write(fd, &number, 1);
-		return ;
-	}	
-	else
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
+    if (num >= 0 && num <= 9)
+    {
+        num = num + '0';
+        write(fd, &num, 1);
+    }
+    else
+    {
+        ft_putnbr_fd(num / 10, fd);
+        ft_putnbr_fd(num % 10, fd);
+    }
 }

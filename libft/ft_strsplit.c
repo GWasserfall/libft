@@ -4,6 +4,7 @@
 static int char_to_null(char *str, char c)
 {
 	int count;
+	int bit;
 	count = 0;
 	while (*str)
 	{

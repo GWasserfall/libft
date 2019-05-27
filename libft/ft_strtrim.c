@@ -15,25 +15,29 @@
 char     *ft_strtrim(char const *s)
 {
 	char	*cursor;
-    char	*newstr;
-    int		index;
+	char	*newstr;
+	int	index;
 
-    if (!s)
-        return (NULL);
-
-    cursor = (char *)s;
-    while (ft_isspace(*cursor))
-        cursor++;
-
-    index = ft_strlen(cursor);
-    while (ft_isspace(cursor[index - 1]))
-       index--;
-
-    newstr = ft_strnew(index);
+	if (!s)
+		return (NULL);
+	cursor = (char *)s;
+	
+	while (ft_isspace(*cursor))
+	        cursor++;
+	if (!*cursor)
+		return (cursor);
+	
+	index = ft_strlen(cursor);
+	while (ft_isspace(cursor[index - 1]))
+		index--;
+	
+	newstr = ft_strnew(index);
+	
 	if (!newstr)
 		return NULL;
-
-    ft_strncpy(newstr, cursor, index + 1);
-    newstr[index] = 0;
-    return newstr;
+	
+	ft_strncpy(newstr, cursor, index + 1);
+	
+	newstr[index] = 0;
+	return newstr;
 }
