@@ -14,9 +14,6 @@
 
 static void	ft_cpyback(char *dest, const char *src, size_t n)
 {
-	size_t len;
-
-	len = ft_strlen((char *)src);
 	while (n > 0)
 	{
 		n--;

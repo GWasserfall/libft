@@ -19,6 +19,15 @@
 # include <stdlib.h>
 # include <stdio.h>
 
+typedef struct		s_list 
+{ 
+	void 			*content; 
+	size_t			content_size; 
+	struct s_list	*next; 
+}					t_list;
+
+
+
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strcat(char *dest, const char *src);

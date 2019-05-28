@@ -4,6 +4,8 @@ NAME=libft.a
 SRC = $(wildcard *.c)
 OBJ = $(SRC:%.c=%.o)
 
+debug:
+	gcc -g ft_strsplit.c libft.a
 
 INCLUDES=./
 

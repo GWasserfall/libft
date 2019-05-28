@@ -59,3 +59,9 @@ char		**ft_strsplit(char const *s, char c)
 	}
 	return (array);
 }
+
+int main()
+{
+	ft_strsplit("asd asd ads ", ' ');
+	return (0);
+}
