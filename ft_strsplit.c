@@ -1,9 +1,21 @@
-#include <libft.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/28 11:20:03 by gwasserf          #+#    #+#             */
+/*   Updated: 2019/05/28 16:42:26 by gwasserf         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int char_to_null(char *str, char c)
+#include "libft.h"
+
+static int	char_to_null(char *str, char c)
 {
 	int count;
+
 	count = 0;
 	while (*str)
 	{
@@ -14,20 +26,19 @@ static int char_to_null(char *str, char c)
 		}
 		str++;
 	}
-	return count;
+	return (count);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
-	char **array;
-	char *ptr;	
-	int strlen;
-	int jump;
-	int insert;
+	char	**array;
+	char	*ptr;
+	int		strlen;
+	int		jump;
+	int		insert;
 
 	if (!s)
-		return NULL;
-
+		return (NULL);
 	insert = 0;
 	ptr = ft_strdup(s);
 	strlen = ft_strlen(ptr);
@@ -43,35 +54,8 @@ char	**ft_strsplit(char const *s, char c)
 			ptr += jump;
 			strlen -= jump;
 		}
-		ptr++; 
+		ptr++;
 		strlen--;
 	}
 	return (array);
 }
-
-// int main(void)
-// {
-// 	char **strs;
-// 	strs = ft_strsplit("*mnmn*", '*');
-	
-// 	while (*strs)
-// 	{
-// 		printf("Word : %s\n", *strs);
-// 		strs++;
-// 	}
-	
-// 	return (0);
-// }
-
-// Description Allocates (with malloc(3)) and returns an array of “fresh” 
-// strings (all ending with ’\0’, including the array itself) obtained by spliting s using 
-// the character c as a delimiter. If the allocation fails the function returns NULL. 
-// Example : ft_strsplit("*hello*fellow***students*", ’*’) returns the array
-//  ["hello", "fellow", "students"]. 
- 
-//  Param. #1 The string to split. 
-//  Param. #2 The delimiter character. 
- 
-//  Return value The array of “fresh” strings result of the split. 
- 
-//  Libc functions malloc(3), free(3)

@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 17:32:41 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/23 12:48:33 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/05/28 16:18:58 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 void	*ft_memchr(void *s, int c, size_t n)
 {
 	char	*str;
-	size_t	index;
 
 	str = (char *)s;
-	index = 0;
-	while (index < n)
+	while (n)
 	{
-		if (c == str[index])
-			return (void *)&str[index];
-		index++;
+		if (c == *str)
+			return ((void *)str);
+		if (c < 0)
+			return ((void *)str + 1);
+		else
+			str++;
+		n--;
 	}
 	return (NULL);
 }

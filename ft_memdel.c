@@ -6,16 +6,16 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 11:22:57 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/23 11:23:23 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/05/28 11:50:22 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void 	ft_memdel(void **ap)
+void	ft_memdel(void **ap)
 {
 	if (!ap)
-		return ;	
+		return ;
 	free(*ap);
 	*ap = NULL;
 }

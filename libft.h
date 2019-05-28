@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:53:22 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/20 16:32:47 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/05/28 11:49:11 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strncpy(char *dest, const char *src, size_t n);
 char	*ft_strnew(size_t size);
 char	*ft_strnstr(char *haystack, char *needle, size_t len);
 char	*ft_strstr(char *haystack, char *needle);
-char	*strrchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 int		ft_atoi(char *str);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -46,6 +46,7 @@ int		ft_strlen(char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+size_t	ft_strlcat(char *dst, const char *src, size_t maxlen);
 void	*ft_memalloc(size_t size);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memchr(void *s, int c, size_t n);
@@ -62,5 +63,15 @@ void	ft_putnbr(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr(char const *s);
 void	ft_putstr_fd(char const *s, int fd);
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
 
 #endif

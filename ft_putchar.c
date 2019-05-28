@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 18:16:52 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/20 18:17:02 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/05/28 11:19:14 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putchar(char c)
 {
 	unsigned char chr;
-	chr = (unsigned char)c;
 
+	chr = (unsigned char)c;
 	write(1, &chr, 1);
 }

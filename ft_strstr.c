@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 14:41:06 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/23 14:41:07 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/05/28 14:57:06 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ char	*ft_strstr(char *haystack, char *needle)
 
 	index = 0;
 	len = ft_strlen(needle);
-
 	if (len == 0 || (haystack == needle))
 		return (haystack);
-	while (*haystack++)
+	while (*haystack)
 	{
 		while (needle[index] != 0)
 		{
 			if (needle[index] != *(haystack + index))
-				break;
+				break ;
 			if (index == len - 1)
-				return haystack;
+				return (haystack);
 			index++;
 		}
+		haystack++;
 		index = 0;
 	}
-	return NULL;
+	return (NULL);
 }
