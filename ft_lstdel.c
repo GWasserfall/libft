@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/15 09:00:12 by event             #+#    #+#             */
-/*   Updated: 2019/05/29 12:46:04 by gwasserf         ###   ########.fr       */
+/*   Created: 2019/05/29 15:08:17 by gwasserf          #+#    #+#             */
+/*   Updated: 2019/05/29 16:29:48 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+void    ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	long long result;
-	long long sign;
+	t_list *current;
+	t_list *next;
 
-	result = 0;
-	sign = 1;
-	while (ft_isspace(*str) || (*str == '+' && ft_isdigit(*(str + 1))))
-		str++;
-	if (*str == '-' && (sign = -1))
-		str++;
-	while (*str >= '0' && *(str) <= '9')
+	current = *alst;
+
+	while (current != NULL)
 	{
-		result = (result * 10) + (*str - '0');
-		str++;
+		next = current->next;
+		ft_lstdelone(&current, del);	
+		free(current);
+		current = next;
 	}
-	result *= sign;
-	if (result > INT_MAX)
-		return (-1);
-	else if (result < INT_MIN)
-		return (0);
-	else
-		return (int)result;
+	*alst = NULL;
 }

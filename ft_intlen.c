@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 18:33:32 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/29 12:44:21 by gwasserf         ###   ########.fr       */
+/*   Created: 2019/05/29 10:18:30 by gwasserf          #+#    #+#             */
+/*   Updated: 2019/05/29 11:18:37 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+int	ft_intlen(int value)
 {
-	size_t dstlen;
-	size_t srclen;
+ 	int i;
+	long val;
 
-	dstlen = ft_strlen(dst);
-	srclen = ft_strlen((char *)src);
-	if (dstsize < dstlen + 1)
-		return (srclen + dstsize);
-	dst += dstlen;
-	ft_memcpy(dst, src, srclen + 1);
-	dst[dstsize - dstlen - 1] = 0;
-	return (srclen + dstlen);
+	i = 1;
+	val = (long)value;
+	if (val < 0 && (i++))
+		val *= -1;
+	while (val > 9 && (i++))
+		val /= 10;
+	return i;
 }
+
