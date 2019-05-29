@@ -46,6 +46,7 @@ char				*ft_strrchr(const char *s, int c);
 int					ft_atoi(char *str);
 int					ft_intlen(int value);
 int					ft_isalnum(int c);
+int					ft_wordcount(char *str, char delim);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);

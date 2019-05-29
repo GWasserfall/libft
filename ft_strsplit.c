@@ -1,67 +1,65 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 11:20:03 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/29 17:21:00 by gwasserf         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-static int	char_to_null(char *str, char c)
+char	**ft_strsplit(char const *s, char c)
 {
-	int count;
+	char **array;
+	int words;
+	int str_index;
+	int arr_index;
 
-	count = 0;
-	while (*str)
+	printf("Got str: [%s]\n",s);
+	arr_index = 0;
+	words = ft_wordcount((char *)s, c);
+	printf("words: [%d]\n",words);
+	array = malloc((sizeof(char *) * (words + 1)));
+	while (*s)
 	{
-		if (*str == c)
+		str_index = 0;
+		if (*s != c && *s != '\0')
 		{
-			*str = '\0';
-			count++;
+			while (s[str_index] != c && s[str_index] != '\0')
+			{	
+				printf("[%d] : [%c]\n", str_index, s[str_index]);
+				str_index++;
+			}
+			array[arr_index] = ft_strnew(str_index + 1);
+			printf("passed to memcopy : %s\n", s);
+			ft_memcpy(array[arr_index], s, str_index);
+			s += str_index;
+			arr_index++;
 		}
-		str++;
+		s++;
 	}
-	return (count);
+	array[words + 1] = NULL;
+	return(array);
 }
 
-char		**ft_strsplit(char const *s, char c)
-{
-	char	**array;
-	char	*ptr;
-	int		strlen;
-	int		jump;
-	int		insert;
 
-	if (!s)
-		return (NULL);
-	insert = 0;
-	ptr = ft_strdup(s);
-	strlen = ft_strlen(ptr);
-	array = (char **)malloc(char_to_null(ptr, c) * sizeof(char *));
-	while (strlen > 0)
-	{
-		if (*ptr != 0)
-		{
-			jump = ft_strlen(ptr);
-			array[insert] = ft_strnew(jump);
-			ft_strcpy(array[insert], ptr);
-			insert++;
-			ptr += jump;
-			strlen -= jump;
-		}
-		ptr++;
-		strlen--;
-	}
-	return (array);
-}
+// void	ft_print_result(char const *s)
+// {
+// 	int		len;
 
-int main()
-{
-	ft_strsplit("asd asd ads ", ' ');
-	return (0);
-}
+// 	len = 0;
+// 	while (s[len])
+// 		len++;
+// 	write(1, s, len);
+// }
+
+// int main()
+// {
+
+// 	char	**tabstr;
+// 	int		i;
+
+// 	i = 0;
+// 	tabstr = ft_strsplit("lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse", ' ');
+// 	while (tabstr[i])
+// 	{
+// 		ft_print_result(tabstr[i]);
+// 		write(1, "\n", 1);
+// 		i++;
+// 	}
+
+
+// 	return (0);
+// }
