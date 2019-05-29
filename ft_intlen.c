@@ -6,14 +6,14 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 10:18:30 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/29 11:18:37 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/05/29 17:15:25 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_intlen(int value)
 {
- 	int i;
-	long val;
+	int		i;
+	long	val;
 
 	i = 1;
 	val = (long)value;
@@ -21,6 +21,5 @@ int	ft_intlen(int value)
 		val *= -1;
 	while (val > 9 && (i++))
 		val /= 10;
-	return i;
+	return (i);
 }
-
