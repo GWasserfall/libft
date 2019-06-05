@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 17:11:51 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/29 12:19:06 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:11:36 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ char	*ft_itoa(int n)
 	}
 	negative = (n < 0) ? 1 : 0;
 	integer_len = ft_intlen(n);
-	str = ft_strnew(integer_len);
+	if (!(str = ft_strnew(integer_len)))
+		return (NULL);
 	number = (negative) ? (long)n * -1 : (long)n;
 	while (number > 0)
 	{

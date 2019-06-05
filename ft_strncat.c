@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 18:37:28 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/28 14:51:33 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/05 10:52:36 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,8 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 		{
 			*ptr = *src;
 			src++;
+			ptr++;
 		}
-		else
-		{
-			*ptr = 0;
-		}
-		ptr++;
 	}
 	*ptr = 0;
 	return (dest);

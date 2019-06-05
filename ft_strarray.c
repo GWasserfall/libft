@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strarray.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 14:44:04 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/06/05 17:16:47 by gwasserf         ###   ########.fr       */
+/*   Created: 2019/06/05 16:58:04 by gwasserf          #+#    #+#             */
+/*   Updated: 2019/06/05 17:00:49 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-char	*ft_strnstr(char *hay, char *ned, size_t len)
+char	**ft_strarray(size_t size)
 {
-	int i;
-	int j;
+	char **array;
 
-	if (hay == ned || !*ned)
-		return (hay);
-	i = 0;
-	while (hay[i] && len--)
-	{
-		j = 0;
-		while (hay[i + j] == ned[j])
-		{
-			if ((!hay[i + j] && !ned[j]) || !ned[j + 1])
-				return (&hay[i]);
-			if (!hay[i + j])
-				break ;
-			if (j >= (int)len)
-				return (NULL);
-			j++;
-		}
-		i++;
-	}
-	return (NULL);
+	if (!(array = (char **)malloc(size * sizeof(char *) + 1)))
+		return (NULL);
+	array[size] = NULL;
+	return (array);
 }

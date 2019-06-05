@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 11:15:26 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/30 11:16:04 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/05 17:09:07 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 char	**ft_strsplit(char const *s, char c)
 {
 	char	**array;
-	int		words;
 	int		str_index;
 	int		arr_index;
 
 	arr_index = 0;
-	words = ft_wordcount((char *)s, c);
-	array = malloc((sizeof(char *) * (words + 1)));
+	if (!s || !(array = ft_strarray(ft_wordcount((char *)s, c))))
+		return (NULL);
 	while (*s)
 	{
 		str_index = 0;
@@ -36,6 +35,5 @@ char	**ft_strsplit(char const *s, char c)
 		}
 		s++;
 	}
-	array[words] = NULL;
 	return (array);
 }

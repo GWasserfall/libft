@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:06:20 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/28 13:32:40 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/05 10:37:59 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ char		*ft_strncpy(char *dest, const char *src, size_t n)
 {
 	size_t len;
 
-	if (!src)
-		return (dest);
 	len = ft_strlen((char *)src);
 	if (len > n)
 	{
