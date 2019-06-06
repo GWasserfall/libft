@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/15 09:00:12 by event             #+#    #+#             */
-/*   Updated: 2019/05/29 12:46:04 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/06 16:15:28 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,5 @@ int	ft_atoi(char *str)
 		str++;
 	}
 	result *= sign;
-	if (result > INT_MAX)
-		return (-1);
-	else if (result < INT_MIN)
-		return (0);
-	else
-		return (int)result;
+	return (int)result;
 }

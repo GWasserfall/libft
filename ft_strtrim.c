@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 13:56:33 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/28 16:41:55 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/06 16:23:04 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s)
 	while (ft_isspace(*cursor))
 		cursor++;
 	if (!*cursor)
-		return (cursor);
+		return (ft_strnew(0));
 	index = ft_strlen(cursor);
 	while (ft_isspace(cursor[index - 1]))
 		index--;

@@ -6,16 +6,18 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 18:34:45 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/28 11:05:19 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/06 15:43:26 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(char *str)
 {
 	int count;
 
 	count = -1;
 	while (str[++count])
 		;
-	return (count);
+	return ((size_t)count);
 }

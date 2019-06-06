@@ -6,13 +6,15 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 11:40:52 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/05/28 12:21:13 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/06 16:28:02 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_striter(char *s, void (*f)(char *))
 {
-	if (!s)
+	if (!s || !f)
 		return ;
 	while (*s)
 	{

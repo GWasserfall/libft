@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:53:22 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/06/05 17:03:29 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/06 15:42:18 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct		s_list
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 t_list				*ft_lstnew(void const *content, size_t content_size);
+t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char				*ft_strrev(char *str);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
@@ -55,7 +56,7 @@ int					ft_isspace(char c);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strequ(char const *s1, char const *s2);
-int					ft_strlen(char *str);
+size_t				ft_strlen(char *str);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_tolower(int c);
@@ -79,7 +80,9 @@ void				ft_putstr(char const *s);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
+void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_striter(char *s, void (*f)(char *));
+void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strsub(char const *s, unsigned int start, size_t len);

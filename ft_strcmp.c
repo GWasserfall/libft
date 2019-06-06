@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 18:29:52 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/06/05 18:13:16 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/06 13:19:56 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ int		ft_strcmp(const char *str1, const char *str2)
 	}
 	return (0);
 }
-
