@@ -6,7 +6,7 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 15:53:22 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/06/06 15:42:18 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/07 16:52:38 by gwasserf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,15 @@ char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strncat(char *dest, const char *src, size_t n);
 char				*ft_strncpy(char *dest, const char *src, size_t n);
 char				*ft_strnew(size_t size);
-char				*ft_strnstr(char *haystack, char *needle, size_t len);
+char				*ft_strnstr(char *hay, char *ned, size_t len);
 char				*ft_strstr(char *haystack, char *needle);
 char				*ft_strrchr(const char *s, int c);
 int					ft_atoi(char *str);
 int					ft_intlen(int value);
 int					ft_isalnum(int c);
 int					ft_wordcount(char *str, char delim);
+int					ft_isupper(int c);
+int					ft_islower(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
