@@ -23,8 +23,6 @@ void	*ft_memchr(void *s, int c, size_t n)
 	{
 		if (l == *str)
 			return ((void *)str);
-		if (l < 0)
-			return ((void *)str + 1);
 		else
 			str++;
 		n--;

@@ -6,13 +6,13 @@
 /*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 18:34:45 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/06/06 15:43:26 by gwasserf         ###   ########.fr       */
+/*   Updated: 2019/06/24 14:31:36 by ayano            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int count;
 

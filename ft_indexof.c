@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_indexof.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwasserf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ayano <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/07 16:19:09 by gwasserf          #+#    #+#             */
-/*   Updated: 2019/06/07 16:50:43 by gwasserf         ###   ########.fr       */
+/*   Created: 2019/06/24 14:28:14 by ayano             #+#    #+#             */
+/*   Updated: 2019/06/24 14:28:48 by ayano            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_islower(int c)
+int	ft_indexof(char *str, char c)
 {
-	if (c > 127)
-		return (0);
-	return (c >= 'a' && c <= 'z');
+	int i;
+
+	i = 0;
+	if (!str)
+		return (-1);
+	while (str[i])
+	{
+		if (str[i] == c)
+			return (i);
+		i++;
+	}
+	return (-1);
 }
