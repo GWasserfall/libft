@@ -34,13 +34,13 @@ SRCS = \
 ./ft_wordcount.c  ./ft_lstdel.c      ./ft_putchar.c   \
 ./ft_strcpy.c     ./ft_strncpy.c     ./ft_lstdelone.c \
 ./ft_putchar_fd.c ./ft_strdel.c      ./ft_strnequ.c	  \
-./ft_indexof.c
+./ft_indexof.c	  ./get_next_line.c
 
 all: $(NAME)
 
 $(NAME):
 	@gcc -Wall -Wextra -Werror -c $(SRCS)
-	@ar rc $(NAME) ft_*.o
+	@ar rc $(NAME) *.o
 	@ranlib $(NAME)
 
 clean:

@@ -12,10 +12,13 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define BUFF_SIZE 42
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 
 typedef struct		s_list
 {
@@ -89,5 +92,6 @@ char				**ft_strarray(size_t size);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					ft_wordcount(char *str, char delim);
+int					get_next_line(const int fd, char **line);
 
 #endif
