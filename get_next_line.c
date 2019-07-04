@@ -60,7 +60,7 @@ void	read_until_line(int fd, char **store)
 	while (!ft_strchr(*store, '\n'))
 	{
 		ret = read(fd, buffer, BUFF_SIZE);
-		buffer[ret] = (ret < BUFF_SIZE) ? 4 : 0;
+		buffer[ret] = ((ret < BUFF_SIZE) && (fd != 0)) ? 4 : 0;
 		buffer[ret + 1] = 0;
 		temp = ft_strdup(*store);
 		free(*store);
@@ -80,5 +80,7 @@ int		get_next_line(int fd, char **line)
 		return (-1);
 	current = ft_get_fdlist(fd, &list);
 	read_until_line(fd, (char **)&current->content);
+	if (!(ft_strlen((char *)current->content)))
+		return (0);
 	return (fetch_line((char **)&current->content, line));
 }
