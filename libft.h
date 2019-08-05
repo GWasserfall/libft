@@ -10,9 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include "libft.h"
+
+# define BUFF_SIZE 42
+
+int get_next_line(const int fd, char **line);
+
+#endif
+
 #ifndef LIBFT_H
 # define LIBFT_H
-# define BUFF_SIZE 1
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
